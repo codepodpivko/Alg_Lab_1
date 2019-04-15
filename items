@@ -1,0 +1,592 @@
+[ {
+  "autoStartup" : false,
+  "options" : {
+    "type" : "TEMPLATES"
+  },
+  "allowRest" : false,
+  "name" : "My transfers and payments",
+  "id" : "SF_PAYMENTS.TEMPLATES"
+}, {
+  "autoStartup" : false,
+  "options" : {
+    "type" : "LINK"
+  },
+  "allowRest" : false,
+  "items" : [ {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "SERVICE"
+    },
+    "allowRest" : true,
+    "service" : {
+      "url" : "/services/P2P_ONUS",
+      "active" : true,
+      "id" : "P2P_ONUS"
+    },
+    "name" : "Transfer to Own Card",
+    "id" : "TRANSFERS.P2P_INT"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "SERVICE"
+    },
+    "allowRest" : true,
+    "service" : {
+      "url" : "/services/P2P_INBANK",
+      "active" : true,
+      "id" : "P2P_INBANK"
+    },
+    "name" : "Transfer to Osachadbank's card",
+    "id" : "TRANSFERS.P2P_INBANK"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "SERVICE"
+    },
+    "allowRest" : true,
+    "service" : {
+      "url" : "/services/P2P_VISA_MC_DOM",
+      "active" : true,
+      "id" : "P2P_VISA_MC_DOM"
+    },
+    "name" : "P2P Domestic",
+    "id" : "TRANSFERS.P2P_DOMESTIC"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "SERVICE"
+    },
+    "allowRest" : true,
+    "service" : {
+      "url" : "/services/P2P_VISA_MC",
+      "active" : true,
+      "id" : "P2P_VISA_MC"
+    },
+    "name" : "Тo another bank's card",
+    "id" : "TRANSFERS.P2P_IPS"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "SERVICE"
+    },
+    "allowRest" : true,
+    "service" : {
+      "url" : "/services/P2P_INBANK_PNONE",
+      "active" : true,
+      "id" : "P2P_INBANK_PNONE"
+    },
+    "name" : "Transfer to phone number",
+    "id" : "TRANSFERS.TRANSFER_TO_PHONE"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "SERVICE"
+    },
+    "allowRest" : true,
+    "service" : {
+      "url" : "/services/P2P_ONUS_VAL_SELL",
+      "active" : true,
+      "id" : "P2P_ONUS_VAL_SELL"
+    },
+    "name" : "Valute sell",
+    "id" : "TRANSFERS.WB_VALUTE_SELL"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "SERVICE"
+    },
+    "allowRest" : true,
+    "service" : {
+      "url" : "/services/TRANSFER_CARD_ACC_",
+      "active" : true,
+      "id" : "TRANSFER_CARD_ACC_"
+    },
+    "name" : "Transfer card_current",
+    "id" : "TRANSFERS.TRANSFER_CARD_ACC_SSD"
+  } ],
+  "url" : "/menu/TRANSFERS/items",
+  "name" : "Transfers to cards",
+  "id" : "SF_PAYMENTS.TRANSFERS"
+}, {
+  "autoStartup" : false,
+  "options" : {
+    "type" : "LINK"
+  },
+  "allowRest" : false,
+  "items" : [ {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "SERVICE"
+    },
+    "allowRest" : true,
+    "service" : {
+      "url" : "/services/TRANSFER_CARD_ACC",
+      "active" : true,
+      "id" : "TRANSFER_CARD_ACC"
+    },
+    "name" : "From card account to current account",
+    "id" : "SUB_WB_ABS_TRANSFERS.WB_TRANSFER_CARD_ACC"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "SERVICE"
+    },
+    "allowRest" : true,
+    "service" : {
+      "url" : "/services/TRANSFER_ACC_CARD",
+      "active" : true,
+      "id" : "TRANSFER_ACC_CARD"
+    },
+    "name" : "From current to card",
+    "id" : "SUB_WB_ABS_TRANSFERS.WB_TRANSFER_ACC_CARD"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "SERVICE"
+    },
+    "allowRest" : true,
+    "service" : {
+      "url" : "/services/TRANSFER_CARD_DEP_ACC",
+      "active" : true,
+      "id" : "TRANSFER_CARD_DEP_ACC"
+    },
+    "name" : "From card to deposit",
+    "id" : "SUB_WB_ABS_TRANSFERS.WB_TRANSFER_CARD_DEP"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "SERVICE"
+    },
+    "allowRest" : true,
+    "service" : {
+      "url" : "/services/TRANSFER_CARD_ACC_",
+      "active" : true,
+      "id" : "TRANSFER_CARD_ACC_"
+    },
+    "name" : "Transfer card_acc SSD",
+    "id" : "SUB_WB_ABS_TRANSFERS.0WB_TRANSFER_CARD_ACC_SSD"
+  } ],
+  "url" : "/menu/SUB_WB_ABS_TRANSFERS/items",
+  "name" : "Transfers between cards and accounts",
+  "id" : "SF_PAYMENTS.WB_ACC_TRANSFERS"
+}, {
+  "autoStartup" : false,
+  "options" : {
+    "type" : "LINK"
+  },
+  "allowRest" : false,
+  "items" : [ {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "SERVICE"
+    },
+    "allowRest" : true,
+    "service" : {
+      "url" : "/services/TRANSFER_TO_SAV",
+      "active" : true,
+      "id" : "TRANSFER_TO_SAV"
+    },
+    "name" : "Transfers to Saving account",
+    "id" : "TXNS_SAV.TR_TO_SAV"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "SERVICE"
+    },
+    "allowRest" : true,
+    "service" : {
+      "url" : "/services/TRANSFER_FROM_SAV",
+      "active" : true,
+      "id" : "TRANSFER_FROM_SAV"
+    },
+    "name" : "Transfers from Saving account",
+    "id" : "TXNS_SAV.TR_FROM_SAV"
+  } ],
+  "url" : "/menu/TXNS_SAV/items",
+  "name" : "Operations with Saving account",
+  "id" : "SF_PAYMENTS.TXN_SAV"
+}, {
+  "autoStartup" : false,
+  "options" : {
+    "type" : "LINK"
+  },
+  "allowRest" : false,
+  "items" : [ {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "SERVICE"
+    },
+    "allowRest" : true,
+    "service" : {
+      "url" : "/services/TRANSFER_TO_VIRTUAL",
+      "active" : true,
+      "id" : "TRANSFER_TO_VIRTUAL"
+    },
+    "name" : "Transfer to Virtual card",
+    "id" : "TXNS_VIRTUAL.TRNSF_2_VIRT"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "SERVICE"
+    },
+    "allowRest" : true,
+    "service" : {
+      "url" : "/services/TRANSFER_FROM_VIRTUAL",
+      "active" : true,
+      "id" : "TRANSFER_FROM_VIRTUAL"
+    },
+    "name" : "Transfer from Virtual card",
+    "id" : "TXNS_VIRTUAL.TRNSF_F_VIRT"
+  } ],
+  "url" : "/menu/TXNS_VIRTUAL/items",
+  "name" : "Operations with Virtual Card",
+  "id" : "SF_PAYMENTS.TXN_VIRTUAL"
+}, {
+  "autoStartup" : false,
+  "options" : {
+    "type" : "LINK"
+  },
+  "allowRest" : false,
+  "items" : [ {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "SERVICE"
+    },
+    "allowRest" : true,
+    "service" : {
+      "url" : "/services/TRANSFER_TO_CRLIMIT",
+      "active" : true,
+      "id" : "TRANSFER_TO_CRLIMIT"
+    },
+    "name" : "Repayment Credit Limit",
+    "id" : "TXNS_CRLIM.REPAY_CRLIM"
+  } ],
+  "url" : "/menu/TXNS_CRLIM/items",
+  "name" : "Repayment Credit Limit",
+  "id" : "SF_PAYMENTS.TXN_CRLIM"
+}, {
+  "autoStartup" : false,
+  "options" : {
+    "type" : "LINK"
+  },
+  "allowRest" : false,
+  "items" : [ {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "SERVICE"
+    },
+    "allowRest" : true,
+    "service" : {
+      "url" : "/services/PAYMENT_MOBILE",
+      "active" : true,
+      "id" : "PAYMENT_MOBILE"
+    },
+    "name" : "Mobile phone payment",
+    "id" : "MOB_PHONE_SCR.MOB_PHONE_SCR"
+  } ],
+  "url" : "/menu/MOB_PHONE_SCR/items",
+  "name" : "Mobile phone payment",
+  "id" : "SF_PAYMENTS.MOB_PHONE_PAY"
+}, {
+  "autoStartup" : false,
+  "options" : {
+    "type" : "SERVICE"
+  },
+  "allowRest" : true,
+  "service" : {
+    "url" : "/services/PAYMENT_MOBILE",
+    "active" : true,
+    "id" : "PAYMENT_MOBILE"
+  },
+  "name" : "Mobile phone payment",
+  "id" : "SF_PAYMENTS.PAY_MOB_SERVICE"
+}, {
+  "autoStartup" : false,
+  "options" : {
+    "type" : "LINK"
+  },
+  "allowRest" : false,
+  "items" : [ {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "SERVICE"
+    },
+    "allowRest" : true,
+    "service" : {
+      "url" : "/services/TRANSFER_CARD_UKR_FIZ_UR",
+      "active" : true,
+      "id" : "TRANSFER_CARD_UKR_FIZ_UR"
+    },
+    "name" : "Payment from card account",
+    "id" : "TRANSFERS_FREE_REQUISITS.TRANSFER_CARD_UKR_FIZ_UR"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "SERVICE"
+    },
+    "allowRest" : true,
+    "service" : {
+      "url" : "/services/TRANSFER_ACC_UKR_FIZ_UR",
+      "active" : true,
+      "id" : "TRANSFER_ACC_UKR_FIZ_UR"
+    },
+    "name" : "Payment from current account",
+    "id" : "TRANSFERS_FREE_REQUISITS.TRANSFER_ACC_UKR_FIZ_UR"
+  } ],
+  "url" : "/menu/TRANSFERS_FREE_REQUISITS/items",
+  "name" : "Payments on free banking details",
+  "id" : "SF_PAYMENTS.TRANSFERS_FRE_REQUISITS"
+}, {
+  "autoStartup" : false,
+  "options" : {
+    "type" : "LINK"
+  },
+  "allowRest" : false,
+  "items" : [ {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "NATIVE",
+      "invoiceCode" : "PAYMENT_OBLENERGO_KI",
+      "billerCode" : "kyivoblenergo_100687"
+    },
+    "allowRest" : true,
+    "name" : "Киев облэнерго 100687",
+    "id" : "PAYMENT_FOR_UTILITY.INVOICE_LIST_100687"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "NATIVE",
+      "invoiceCode" : "PAYMENT_VIDI",
+      "billerCode" : "kyiv_vidi_autocity"
+    },
+    "allowRest" : true,
+    "name" : "ВиДи автоцентр",
+    "id" : "PAYMENT_FOR_UTILITY.INVOICE_LIST_VIDI"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "NATIVE",
+      "invoiceCode" : "PAYMENT_OBLGAS_KI",
+      "billerCode" : "kyiv_oblgaz_zbut"
+    },
+    "allowRest" : true,
+    "name" : "Облгаз Киев",
+    "id" : "PAYMENT_FOR_UTILITY.INVOICE_LIST_OBLGAZ"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "NATIVE",
+      "invoiceCode" : "INVOICE_ASOP_CARD",
+      "billerCode" : "ASOP_CARD"
+    },
+    "allowRest" : true,
+    "name" : "Оплата транспортной каты",
+    "id" : "PAYMENT_FOR_UTILITY.INVOICE_LIST_ASOP_CARD"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "SERVICE"
+    },
+    "allowRest" : true,
+    "service" : {
+      "url" : "/services/INVOICE_QR",
+      "active" : true,
+      "id" : "INVOICE_QR"
+    },
+    "name" : "Траспортный билет",
+    "id" : "PAYMENT_FOR_UTILITY.INVOICE_QR"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "NATIVE",
+      "invoiceCode" : "INVOICE_KH_ZK",
+      "billerCode" : "kharkiv_zhilkomservis"
+    },
+    "allowRest" : true,
+    "name" : "Харьков квартплата",
+    "id" : "PAYMENT_FOR_UTILITY.INVOICE_KH_ZK"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "NATIVE",
+      "invoiceCode" : "INVOICE_KH_W2",
+      "billerCode" : "kharkiv_vodokanal_2"
+    },
+    "allowRest" : true,
+    "name" : "Харьков водопостачання",
+    "id" : "PAYMENT_FOR_UTILITY.INVOICE_KH_W2"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "NATIVE",
+      "invoiceCode" : "INVOICE_KH_W1",
+      "billerCode" : "kharkiv_vodokanal_1"
+    },
+    "allowRest" : true,
+    "name" : "Харьков за водовідведення",
+    "id" : "PAYMENT_FOR_UTILITY.INVOICE_KH_W1"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "NATIVE",
+      "invoiceCode" : "INVOICE_KH_GAZ2",
+      "billerCode" : "kharkiv_gazzbut_2"
+    },
+    "allowRest" : true,
+    "name" : "ГАЗ Харьков",
+    "id" : "PAYMENT_FOR_UTILITY.INVOICE_KH_GAZ2"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "NATIVE",
+      "invoiceCode" : "INVOICE_KH_MEGA",
+      "billerCode" : "kharkiv_megabank"
+    },
+    "allowRest" : true,
+    "name" : "Харьков единая квитанция",
+    "id" : "PAYMENT_FOR_UTILITY.INVOICE_KH_MEGA"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "NATIVE",
+      "invoiceCode" : "INVOICE_KH_GAZ1",
+      "billerCode" : "kharkiv_gazzbut_1"
+    },
+    "allowRest" : true,
+    "name" : "ГАЗ Харьковская область",
+    "id" : "PAYMENT_FOR_UTILITY.INVOICE_KH_GAZ1"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "search" : "INVOICE_SEARCH_ADDRESS",
+      "type" : "NATIVE",
+      "invoiceCode" : "INVOICE_UTILITY_KI",
+      "billerCode" : "Utility"
+    },
+    "allowRest" : true,
+    "name" : "Пошук по адресі",
+    "id" : "PAYMENT_FOR_UTILITY.SEARCH"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "NATIVE",
+      "invoiceCode" : "INVOICE_LOE",
+      "billerCode" : "kharkiv_oblenergo"
+    },
+    "allowRest" : true,
+    "name" : "Оплата Львів облэнерго",
+    "id" : "PAYMENT_FOR_UTILITY.INVOICE_LIST_LVIVENERGY"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "search" : "INVOICE_SEARCH_ADDRESS",
+      "type" : "NATIVE",
+      "invoiceCode" : "INVOICE_UTILITY_KI",
+      "billerCode" : "Utility"
+    },
+    "allowRest" : true,
+    "name" : "Комунальни послугі Київ",
+    "id" : "PAYMENT_FOR_UTILITY.INVOICE_LIST_UTL"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "SERVICE"
+    },
+    "allowRest" : true,
+    "service" : {
+      "url" : "/services/INVOICE_LIST_GAS",
+      "active" : true,
+      "id" : "INVOICE_LIST_GAS"
+    },
+    "url" : "/menu/INVOICE_PAY_GAZ/items",
+    "name" : "Gas",
+    "id" : "PAYMENT_FOR_UTILITY.UTILITY_GAZ"
+  } ],
+  "url" : "/menu/PAYMENT_FOR_UTILITY/items",
+  "name" : "Payment for utility",
+  "id" : "SF_PAYMENTS.PAY_UTILITY"
+}, {
+  "autoStartup" : false,
+  "options" : {
+    "type" : "LINK"
+  },
+  "allowRest" : false,
+  "items" : [ {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "SERVICE"
+    },
+    "allowRest" : true,
+    "service" : {
+      "url" : "/services/PAYMENT_FINES",
+      "active" : true,
+      "id" : "PAYMENT_FINES"
+    },
+    "name" : "Payments Fines",
+    "id" : "SERVICE_PAYMENTS.CDMA_PAYMENT"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "NATIVE",
+      "invoiceCode" : "INVOICE_UKRTELECOM",
+      "billerCode" : "lviv_ukrtelecom"
+    },
+    "allowRest" : true,
+    "name" : "Оплата Укртелеком",
+    "id" : "SERVICE_PAYMENTS.WB_UKRTELECOM_REST"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "SERVICE"
+    },
+    "allowRest" : true,
+    "service" : {
+      "url" : "/services/INVOICE_LIST_AVOLIA",
+      "active" : true,
+      "id" : "INVOICE_LIST_AVOLIA"
+    },
+    "url" : "/menu/INV_PAY_AVOLIA/items",
+    "name" : "Volia (by bill number)",
+    "id" : "SERVICE_PAYMENTS.WB_INV_AVOLIA"
+  }, {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "SERVICE"
+    },
+    "allowRest" : true,
+    "service" : {
+      "url" : "/services/INVOICE_CONTRACT_VOLIA",
+      "active" : true,
+      "id" : "INVOICE_CONTRACT_VOLIA"
+    },
+    "url" : "/menu/INV_PAY_CVOLIA/items",
+    "name" : "Volia (by contract number)",
+    "id" : "SERVICE_PAYMENTS.WB_INV_CVOLIA"
+  } ],
+  "url" : "/menu/SERVICE_PAYMENTS/items",
+  "name" : "Other services",
+  "id" : "SF_PAYMENTS.PAY_MOB"
+}, {
+  "autoStartup" : false,
+  "options" : {
+    "type" : "LINK"
+  },
+  "allowRest" : false,
+  "items" : [ {
+    "autoStartup" : false,
+    "options" : {
+      "type" : "SERVICE"
+    },
+    "allowRest" : true,
+    "service" : {
+      "url" : "/services/PAY_CHR_TBL",
+      "active" : true,
+      "id" : "PAY_CHR_TBL"
+    },
+    "name" : "Фонд \"Таблеточка\"",
+    "id" : "PAY_CHR.PAY_CHR"
+  } ],
+  "url" : "/menu/PAY_CHR/items",
+  "name" : "Благодійність",
+  "id" : "SF_PAYMENTS.PAY_CHARITY"
+} ]
